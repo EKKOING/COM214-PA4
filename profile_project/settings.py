@@ -72,8 +72,8 @@ TEMPLATES = [
 ]
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    '/var/www/static/',
+    BASE_DIR / "assets",
+    '/var/www/assets/',
 ]
 
 WSGI_APPLICATION = 'profile_project.wsgi.application'
