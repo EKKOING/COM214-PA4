@@ -9,6 +9,6 @@ urlpatterns = [
     path('portfolio/', PortfolioPageView.as_view(), name='portfolio'),
     path('contact/', ContactPageView.as_view(), name='contact'),
     path('socials/', SocialsPageView.as_view(), name='socials'),
-    path('socials/bootstrapless',
+    path('socials/bootstrapless/',
          BootstraplessPageView.as_view(), name='bootstrapless')
 ]
