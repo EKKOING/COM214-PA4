@@ -6,7 +6,7 @@ from .views import (AboutPageView, BootstraplessPageView, ContactPageView,
 urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
     path('about/', AboutPageView.as_view(), name='about'),
-    path('porfolio/', PortfolioPageView.as_view(), name='portfolio'),
+    path('portfolio/', PortfolioPageView.as_view(), name='portfolio'),
     path('contact/', ContactPageView.as_view(), name='contact'),
     path('socials/', SocialsPageView.as_view(), name='socials'),
     path('socials/bootstrapless',
