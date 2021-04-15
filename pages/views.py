@@ -16,3 +16,6 @@ class ContactPageView(TemplateView):
 
 class SocialsPageView(TemplateView):
     template_name = 'socials.html'
+
+class BootstraplessPageView(TemplateView):
+    template_name = 'no-bootstrap.html'
