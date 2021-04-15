@@ -1,59 +1,8 @@
-<!doctype html>
-<html lang="en">
+{% extends 'base.html' %}
+
 {% load static %}
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Personal CSS-->
-    <link rel="stylesheet" href="{% static 'pages/style.css' %}">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/1f521e60db.js" crossorigin="anonymous"></script>
-
-    <title>Nicholas Lorentzen's Website</title>
-    <link rel="icon" type="image/png" href="{% static 'images/icon.png' %}" />
-</head>
-
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="{% static 'images/icon.png' %}" height="40px" alt="icon"> </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="./index.html"><i class="fas fa-home"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./projects.html">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./contact.html">Contact Me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./socials.html">Socials</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Photo Portfolio
-                                (Coming Soon)</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./about-me.html">About Me</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+{%block content %}
 
     <div class="container" id="main-container">
         <div class="row">
@@ -110,14 +59,8 @@
         <div class="row">
             <div class="alert alert-info" role="alert">
                 <button type="button" class="btn btn-info">Heads Up!</button>&nbsp;&nbsp;&nbsp;<a
-                    href="./no-bootstrap.html">You Can View This Page Without Bootstrap!</a>
+                    href="{% url 'bootstrapless' %}">You Can View This Page Without Bootstrap!</a>
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
+{% endblock content %}

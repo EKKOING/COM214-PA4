@@ -1,61 +1,8 @@
-<!doctype html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% load static %}
 
-    <!-- Personal CSS-->
-    <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/1f521e60db.js" crossorigin="anonymous"></script>
-
-    <title>Nicholas Lorentzen's Website</title>
-    <link rel="icon" type="image/png" href="images/icon.png" />
-</head>
-
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="images/icon.png" height="40px" alt="icon"> </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html"><i
-                                    class="fas fa-home"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./projects.html">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./contact.html">Contact Me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./socials.html">Socials</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Photo Portfolio
-                                (Coming Soon)</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./about-me.html">About Me</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
+{%block content %}
     <div class="container" id="main-container">
         <div class="row">
             <div class="col-4">
@@ -90,21 +37,21 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="images/blt.png" class="d-block w-100" alt="BLT App Icon">
+                        <img src="{% static 'images/blt.png' %}" class="d-block w-100" alt="BLT App Icon">
                         <div class="carousel-caption d-none d-md-block">
                             <h3><a href="https://github.com/BLT-App/BLT-App" class="carousel-link">BLT App</a></h3>
                             <p>A task tracker that uses statistics to motivate you</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/owssb.png" class="d-block w-100" alt="OWSSB Icon">
+                        <img src="{% static 'images/owssb.png' %}" class="d-block w-100" alt="OWSSB Icon">
                         <div class="carousel-caption d-none d-md-block">
                             <h3><a href="https://github.com/EKKOING/CO552_ssb" class="carousel-link">OW SSB</a></h3>
                             <p>A smash style fighting game written in Java</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/connctme.png" class="d-block w-100" alt="ConnctMe Icon">
+                        <img src="{% static 'images/connctme.png' %}" class="d-block w-100" alt="ConnctMe Icon">
                         <div class="carousel-caption d-none d-md-block">
                             <h3><a href="https://devpost.com/software/connctme" class="carousel-link">ConnctMe</a></h3>
                             <p>A Hack@Brown Project</p>
@@ -124,10 +71,4 @@
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
+{% endblock content %}
