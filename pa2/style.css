@@ -1,0 +1,59 @@
+.carousel-link {
+    text-decoration: underline white;
+    color: white;
+}
+
+.project-text > h3 > a {
+    text-decoration: underline black;
+    color: black;
+}
+
+.project-text > p {
+    text-align: justify;
+}
+
+.bootstrapless-alert {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightblue;
+    border-radius: 0.75rem;
+    max-height: 50px;
+}
+
+.bootstrapless-btn {
+    background-color: cyan;
+    max-height: 40px;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 2px 4px 3px 4px;
+}
+
+/*Offsets Content From Navbar*/
+#main-container {
+    padding-top: 5%;
+}
+/*Force Profile Image To Not Shrink*/
+#profile-image {
+    min-height: 100px !important;
+}
+#carousel-header {
+    text-align: center;
+    padding: 5%;
+}
+
+#socials-grid > div > div, #bootstrapless-grid > div {
+    margin: 0.5rem;
+}
+
+#bootstrapless-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-shrink: 3;
+    justify-content: space-between;
+}
+
+#bio-container {
+    padding-top: 5%;
+    max-width: 600px;
+}
